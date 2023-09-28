@@ -18,16 +18,12 @@ from tsunami.proto import network_service_pb2
 from tsunami.proto import plugin_representation_pb2
 from tsunami.proto import reconnaissance_pb2
 
-
-
 TargetInfo = reconnaissance_pb2.TargetInfo
 NetworkService = network_service_pb2.NetworkService
 DetectionReportList = detection_pb2.DetectionReportList
 PluginDefinition = plugin_representation_pb2.PluginDefinition
 
-
 class TsunamiPlugin(metaclass=abc.ABCMeta):
-
   @abc.abstractmethod
   def GetPluginDefinition(self) -> PluginDefinition:
     pass
