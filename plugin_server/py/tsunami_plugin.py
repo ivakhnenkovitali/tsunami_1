@@ -26,15 +26,12 @@ class TsunamiPlugin(metaclass=abc.ABCMeta):
   @abc.abstractmethod
   def GetPluginDefinition(self) -> PluginDefinition:
     pass
-
   @classmethod
   def __subclasshook__(cls, subclass: abc.ABCMeta) -> bool:
     return (hasattr(subclass, 'GetPluginDefinition') and
             callable(subclass.GetPluginDefinition))
-
 class VulnDetector(TsunamiPlugin):
   """A TsunamiPlugin that detects potential vulnerabilities on the target.
-
   Usually a vulnerability detector takes the information about an exposed
   network service, detects whether the service is vulnerable to a
   specific vulnerability, and reports the detection results.
@@ -52,7 +49,6 @@ class VulnDetector(TsunamiPlugin):
       target: Information about the scanning target itself.
       matched_services: A list of network services whose vulnerabilities could
         be detected by this plugin.
-
     Returns:
       A DetectionReportList for all the vulnerabilities of the scanning target.
     """
