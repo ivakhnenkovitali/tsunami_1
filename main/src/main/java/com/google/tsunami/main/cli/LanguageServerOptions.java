@@ -70,7 +70,6 @@ public final class LanguageServerOptions implements CliOption {
           }
         }
       }
-
       var pathCounts = pluginServerFilenames == null ? 0 : pluginServerFilenames.size();
       var portCounts = pluginServerPorts == null ? 0 : pluginServerPorts.size();
       if (pathCounts != portCounts) {
