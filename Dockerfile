@@ -7,6 +7,7 @@ RUN apt-get update \
  && rm -rf /usr/share/doc && rm -rf /usr/share/man \
  && apt-get clean
 
+
 WORKDIR /usr/tsunami/repos
 
 # Clone the plugins repo
