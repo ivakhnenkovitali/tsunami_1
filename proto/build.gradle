@@ -13,6 +13,7 @@ sourceSets {
     }
 }
 
+
 protobuf {
     generatedFilesBaseDir = "${projectDir}/build/generated"
     protoc {
